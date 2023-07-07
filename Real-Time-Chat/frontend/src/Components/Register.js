@@ -32,6 +32,8 @@ const Register = () => {
       try{localStorage.setItem("userInfo",JSON.stringify(data));}catch(error){
         console.log(error.message);
       }
+      window.alert("Registration Successfull!");
+
     }catch(error){
       console.log(error.message);
     }
