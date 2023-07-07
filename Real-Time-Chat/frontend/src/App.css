@@ -61,19 +61,21 @@
   font-weight: bold;
   font-size: 22px;
   width: 45%;
+  overflow-x: hidden;
 
 }
 .login-window .buttons .active{
   border: 2px solid white;
   border-radius: 6px;
   background-color: white;
+
 }
 .login-window{
   display: flex;
   flex-direction: column ;
   justify-content: center;
   align-items: center;
-  width: 30vw;
+  /* width: 30vw; */
   height: auto;
   background-color: rgba(31,40,51,0.5);
   color: white;
@@ -92,7 +94,7 @@
 }
 .login-form input{
   margin: 6%;
-  width: 100%;
+  width: 90%;
   background: none;
   height: 4vh;
   color: white;
@@ -102,7 +104,7 @@
   background-color: aliceblue;
   border: none;
   border-radius: 3px;
-  width: 100%;
+  width: 90%;
   height: 4vh;
   color: #1f520d;
   font-size: 20px;
@@ -127,7 +129,7 @@
 }
 .register-form input{
   margin: 3%;
-  width: 100%;
+  width: 90%;
   background: none;
   height: 4vh;
   color: white;
@@ -138,7 +140,7 @@
   background-color: aliceblue;
   border: none;
   border-radius: 3px;
-  width: 100%;
+  width: 90%;
   height: 4vh;
   color: #1f520d;
   font-size: 20px;

@@ -21,8 +21,8 @@ const Contacts = (props)=>{
                         <img src={userIcon} alt="User" className="contactUserIcon"/>
                         <div className="contactDesc">
 
-                        <h5 className="contact-name" >contactName:{props.contactName}</h5>
-                        <h5 className="contact-id" >username: {props.recipients[0]}</h5>
+                        <h5 className="contact-name" >{props.contactName}</h5>
+                        <h5 className="contact-id" style={{color:"gray"}}>{props.recipients[0]}</h5>
                         </div>
                 </div>
             </div>
