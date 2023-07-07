@@ -105,24 +105,24 @@ To Run on browser
 
 1. Registration
 
-![Registration](./Real-Time-Chat/real-chat-snippents/register.png)
+![Registration](./Real-Time-Chat/real-chat-snippets/register.png)
 
 2. Login
 
-![Login-page](./Real-Time-Chat/real-chat-snippents/login.png)
+![Login-page](./Real-Time-Chat/real-chat-snippets/login.png)
 
 3. Real Time Chat with Emoji 
 
-![Chatting-room](./Real-Time-Chat/real-chat-snippents/chatpaneafterregister.png)
-![Chatting-room2](./Real-Time-Chat/real-chat-snippents/realTimeChat.png)
+![Chatting-room](./Real-Time-Chat/real-chat-snippets/chatpaneafterregister.png)
+![Chatting-room2](./Real-Time-Chat/real-chat-snippets/realTimeChat.png)
 
 4. Image share
 
-![Image Share](./Real-Time-Chat/real-chat-snippents/imageShare.png)
+![Image Share](./Real-Time-Chat/real-chat-snippets/imageShare.png)
 
 5. Adding Contacts, Groups and Group Members
-![addingContact](./Real-Time-Chat/real-chat-snippents/addingGroups.png)
-![addingContact](./Real-Time-Chat/real-chat-snippents/addingContact.png)
+![addingContact](./Real-Time-Chat/real-chat-snippets/addingGroups.png)
+![addingContact](./Real-Time-Chat/real-chat-snippets/addingContact.png)
 
 
 ## Made By
