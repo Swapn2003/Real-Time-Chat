@@ -17,7 +17,7 @@ function App() {
         <SocketProvider id={myId}>
           <UserState>
             <div className="all">
-              <Topbar myId={myId}/>
+              <Topbar myId={myId} setmyId={setmyId}/>
               <div className="below-top">
                 <Leftpane myId={myId}/>
                 <Chatpane myId={myId} />
