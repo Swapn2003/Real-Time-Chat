@@ -147,7 +147,7 @@ const Chatbox = (props) => {
           data.append("file", file);
           data.append("upload_preset", "chat-app");
           data.append("cloud_name", "dntch5frn");
-          fetch("https://api.cloudinary.com/v1_1/dntch5frn/raw/upload", {
+          fetch("https://api.cloudinary.com/v1_1/dntch5frn/image/upload", {
             method: "post",
             body: data,
           })
