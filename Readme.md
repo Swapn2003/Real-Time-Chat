@@ -5,7 +5,7 @@
 Con-ik is a real-time chatting website that allows users to connect and link with their contacts and groups. Built using the MERN stack (MongoDB, Express.js, React.js, Node.js) and Socket.IO, Con-ik offers a seamless chatting experience with emoji support, and image sharing features.
 
 ## How to use?
- - Go to https://statuesque-pixie-491fa1.netlify.app or http://localhost:3000 (if running locally).
+ - Go to https://real-time-chating.netlify.app or http://localhost:3000 (if running locally).
  - Create your own new account by Registering.
  - After that Login to enter the application. 
 
