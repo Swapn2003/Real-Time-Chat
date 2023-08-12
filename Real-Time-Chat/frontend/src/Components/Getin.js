@@ -1,19 +1,11 @@
 import React from 'react'
-// import { useRef } from 'react';
 import Login from './Login';
 import Register from './Register'
-// import axios from 'axios';
 import { useState } from 'react';
 
-// import userContext from '../context/users/userContext';
 
 const Getin = (props) => {
-  // const idRef = useRef();
-  // // const User =useContext(userContext);
-  // const handleOnSubmit =(e)=>{
-  //   e.preventDefault();
-  //   props.setmyId(idRef.current.value);
-  // }
+
 
   const [activeTab, setActiveTab] = useState(0);
 
@@ -23,17 +15,6 @@ const Getin = (props) => {
   
   return (
     <div>
-      {/* <div className="login-page">
-        <div className="login">
-            <form onSubmit={handleOnSubmit}>
-              <div className="label">Enter your id</div>
-              <input type="text" ref={idRef} required/>
-                <button type='submit'>Login</button>
-                <button >create new Id</button>
-
-            </form>
-        </div>
-      </div> */}
         <div className="login-page">
 
             <div className="login-window">

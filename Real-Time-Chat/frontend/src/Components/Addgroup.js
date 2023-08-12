@@ -22,7 +22,6 @@ const Addgroup = (props) => {
         }
       };
       const {data} = await axios.put("http://localhost:5000/api/user/contacts/addContact",{"myId":props.myId,recipients:[groupId,props.myId],contactName:groupName,isGroupChat:false},config);
-      // console.log(data);
 
       const contacts =await axios.get(`http://localhost:5000/api/user/contacts/accessContacts?myId=${props.myId}`);
       await User.updatemyContacts(contacts.data);
@@ -30,10 +29,7 @@ const Addgroup = (props) => {
     }catch(error){
       console.log(error.message);
     }
-    // if (groupName && groupId) {
-    //   const groupData = { name: groupName, id: groupId };
-    //   User.updatemyContacts(groupData);
-    // }
+
   }
   const handleOnClick2 =async()=>{
     const groupName = window.prompt('Enter group name:');
@@ -50,7 +46,6 @@ const Addgroup = (props) => {
         }
       };
       const {data} = await axios.put("http://localhost:5000/api/user/contacts/addContact",{"myId":props.myId,recipients:[groupId,props.myId],contactName:groupName,isGroupChat:true},config);
-      // console.log(data);
 
       const contacts =await axios.get(`http://localhost:5000/api/user/contacts/accessContacts?myId=${props.myId}`);
       await User.updatemyContacts(contacts.data);
@@ -58,10 +53,7 @@ const Addgroup = (props) => {
     }catch(error){
       console.log(error.message);
     }
-    // if (groupName && groupId) {
-    //   const groupData = { name: groupName, id: groupId };
-    //   User.updatemyContacts(groupData);
-    // }
+
   }
   return (
     <div>

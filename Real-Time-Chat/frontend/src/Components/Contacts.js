@@ -8,12 +8,9 @@ const Contacts = (props)=>{
     const User=useContext(userContext);
     const handleOnClick = async ()=>{
         await User.updateCurrentUser(props.contactName,props.recipients,props.isGroupChat);
-        // console.log("Contacts::",props.contactName);
 
-            // contactClass[0].style.background="white";
         
     }
-    // console.log(props.Active);
     return (
         <div>
             <div>

@@ -1,5 +1,4 @@
 import React from 'react'
-// import {Link} from 'react-router-dom';
 import { useState } from 'react';
 import axios from "axios"
 
@@ -8,12 +7,7 @@ const Register = () => {
   const [name, setName] = useState();
   const [username, setUsername] = useState();
   const [email, setEmail] = useState();
-  // const [confirmpassword, setConfirmpassword] = useState();
   const [password, setPassword] = useState();
-  // const [pic, setPic] = useState();
-
-
-  // const postDetails = (pics) => {}
 
   const submitHandler =async (e)=>{
     if(!name || !username || !email || !password){

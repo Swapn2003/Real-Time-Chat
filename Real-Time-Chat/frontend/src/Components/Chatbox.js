@@ -219,33 +219,25 @@ const Chatbox = (props) => {
           }
         };
         await socket.emit("send-message", { recipients, text: messageTyped,contactName:User.currentUser.contactName,isGroupChat:User.currentUser.isGroupChat,type:"text",locn:pic});
-        // await User.addMessageToContact({text:messageTyped,id:recipients,'sender':props.myId});
         await axios.put("http://localhost:5000/api/user/message/addMessage",{myId:props.myId,contactName:User.currentUser.contactName,message:{"sender":myId,"content":messageTyped,type:"text",locn:pic}},config).then(()=>{
           setmessageTyped("");
 
         }).catch((err)=>{
           console.log(err);
         })
-        // console.log(response);
-        // props.setmyId(username);
-        //   localStorage.setItem("userInfo",JSON.stringify(data));
+
       }catch(error){
         console.log(error.message);
       }
       console.log("see here chatbox::",User.currentUser)
       
-      // console.log("Hello"); // Log the updated value of recipients
-      // event.preventDefault();
+
     }
       
     };
     
     
-    // useEffect(() => {
-      //   if(User.Message.length>1){
-  //     console.log(User.Message);
-  //   }
-  // }, [User.Message]);
+
   return (
     <div>
       

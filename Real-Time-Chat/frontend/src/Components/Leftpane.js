@@ -12,7 +12,6 @@ const Leftpane = (props) => {
       try {
         const response = await axios.get(`http://localhost:5000/api/user/contacts/accesscontacts?myId=${props.myId}`);
         const myContactList = response.data; // Assuming contact list is directly returned in response.data
-        // console.log("hello");
         const mappedContacts = myContactList.map((contact) => {
           return {
             contactName: contact.contactName,
@@ -22,8 +21,6 @@ const Leftpane = (props) => {
           };
         });
         await User.updatemyContacts(mappedContacts);
-        // console.log("User.mycontacts",User.myContacts);
-        // Update User context or state with the contact list
       } catch (error) {
         console.log(error.message);
       }

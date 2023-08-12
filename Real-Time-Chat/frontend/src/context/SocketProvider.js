@@ -20,34 +20,7 @@ export function SocketProvider({ id, children }) {
     return () => newSocket.close()
   }, [id])
 
-  // useEffect(() => {
-  //   fetch(`http://localhost:5000/socket.io/?id=${id}`, {
-  //     method: 'GET',
-  //     mode: 'cors',
-  //     credentials: 'same-origin'
-  //   })
-  //   .then(response => response.json())
-  //   .then(data => {
-  //     const newSocket = io.connect('http://localhost:5000', {
-  //       query: { id },
-  //       transports: ['websocket'],
-  //       reconnectionAttempts: 3,
-  //       timeout: 10000,
-  //       auth: { token: data.token }
-  //     });
-  //     setSocket(newSocket);
-  //   })
-  //   .catch(error => {
-  //     console.error('Error connecting to socket:', error);
-  //   });
-  
-  //   return () => {
-  //     if (socket) {
-  //       socket.disconnect();
-  //     }
-  //   };
-  // }, [id,socket]);
-  
+
 
   return (
     <SocketContext.Provider value={socket}>

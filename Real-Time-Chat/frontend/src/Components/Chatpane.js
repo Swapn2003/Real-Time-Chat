@@ -3,7 +3,6 @@ import Chatbox from './Chatbox'
 import Message from './Message'
 import userIcon from '../img/user.png';
 import moreIcon from '../img/More-icon.png'
-// import { useState } from 'react';
 import { useContext ,useEffect} from 'react';
 import userContext from '../context/users/userContext';
 import axios from 'axios';
@@ -12,28 +11,7 @@ import Image from './Image';
 
 const Chatpane = (props) => {
   const User =  useContext(userContext);
-  // // console.log(User.myContacts) ;
-  // const chatpane = User.myContacts && User.myContacts.filter((contact) => contact.id === User.currentUser.id).map((contact) =>
-  // contact.message.map((message, index) => (
-  //   <div className={message.sender===props.myId?"outgoing-chats":"mychats"} key={index}>
-  //       <Message name={message.sender===props.myId?"You":message.sender} text={message.text} />
-  //     </div>
-  //   ))
-  // );
 
-  // const [chatpane,setchatpane] =useState();
-
-    // Perform any necessary actions when User.currentUser changes
-    // For example, fetch new chat messages
-      // if(!User.currentUser){
-      //   return null;
-      // }
-      // const chatpane=null;
-      // User.myContacts.filter((contact) => contact.id === User.currentUser.id).map((contact) =>
-      // {console.log(contact.message);
-        
-        
-      // });
 
       const handleOnClick=async()=>{
        const newMemberUsername = window.prompt('New Member username?');
@@ -52,11 +30,10 @@ const Chatpane = (props) => {
 
 
       if (!User.myContacts || !User.currentUser) {
-        return null; // Or return a loading indicator
+        return null;
       }
       const chatpane=User.myContacts.filter((contact) => contact.contactName === User.currentUser.contactName).map((contact) =>
       { if(contact.messages!==undefined){if(contact.messages.length!==0){
-      // console.log("contact.message:: ",contact.messages);
         return contact.messages.map((message, index) => (
           message.type === "file" ? (
             <div

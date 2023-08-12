@@ -1,17 +1,9 @@
 import React, { useState } from 'react'
-// import {Link} from 'react-router-dom';
 import axios from "axios"
 const Login = (props) => {
   const [username, setUsername] = useState();
-  // const [confirmpassword, setConfirmpassword] = useState();
   const [password, setPassword] = useState();
-  // const fetchChats = async ()=>{
-  //   const data = await axios.get("/api/chat")
-  //   console.log(data.data);
-  // }
-  // useEffect(()=>{
-  //   fetchChats();
-  // },[])
+
   const submitHandler =async (e)=>{
     if(!username || !password){
       window.alert("Fill All Entries");
@@ -26,7 +18,6 @@ const Login = (props) => {
       const {data} = await axios.post("http://localhost:5000/api/user/login",{username,password},config);
       console.log(data);
       props.setmyId(username);
-    //   localStorage.setItem("userInfo",JSON.stringify(data));
     }catch(error){
       console.log(error.message);
     }
