@@ -54,17 +54,14 @@ const authUser = asyncHandler(async (req,res)=>{
         throw new Error("Invalid Email or Password");
     }
 })
-//rather than post request use queries instead
-// /api/user?search=swapn
+
 const allUsers = asyncHandler( async(req,res)=>{
-    //to get search variable from query
     const keyword = req.query.search?{
         $or:[{ name: { $regex: req.query.search, $options: "i" } },
         { email: { $regex: req.query.search, $options: "i" } },]
     }:{}
     const users = await User.find(keyword)
     res.send(users);
-    // console.log(users);
     
 })
 
@@ -113,8 +110,7 @@ const addContact = asyncHandler(async (req, res) => {
     }:{}
     const user = await User.findOne(keyword)
     res.send(user.userContacts);
-    // console.log("aayi");
-    // console.log(user.userContacts);
+
   })
   
   
@@ -128,16 +124,12 @@ const addContact = asyncHandler(async (req, res) => {
         } : {};
         
         const user = await User.find(keyword);
-        // res.send(user[0].userContacts);
         const contact = await user[0].userContacts.find((c) => c.contactName === contactName);
         res.send(contact.recipients);
-        // console.log(contact);
     });
     
     const addMessage = asyncHandler(async (req,res)=>{
-      // console.log(228,req.body.myId,req.file);
       const {myId,contactName,message,locn} =req.body;
-      // console.log("message::",message);
       if (!contactName) {
         res.status(400);
         throw new Error("Please enter Contact name");
@@ -153,10 +145,7 @@ const addContact = asyncHandler(async (req, res) => {
             res.status(404);
             throw new Error("Enter Valid contact name");
         }
-        // if(message.type==='file'){
-        //   message.body=req.file.path;
-        // }
-        // console.log(249,message);
+
       contact.messages.push(message);
       const updatedUser = await user.save();
     
@@ -164,11 +153,10 @@ const addContact = asyncHandler(async (req, res) => {
     })
     
     const addFile=asyncHandler(async(req,res)=>{
-      // console.log(257,req.file,req.body);
+
 
       console.log(259,req.file);
       const {myId,contactName,message_sender,message_content} =req.body;
-      // console.log("message::",message);
       if (!contactName) {
         res.status(400);
         throw new Error("Please enter Contact name");
@@ -206,10 +194,8 @@ const addContact = asyncHandler(async (req, res) => {
           } : {};
           
           const user = await User.find(keyword);
-        //   res.send(user[0].userContacts);
           const contact = await user[0].userContacts.find((c) => c.contactName === contactName);
           res.send(contact.messages);
-          // console.log(contact);
       });
     const getName = asyncHandler(async (req, res) => {
         const { senderId ,myId} = req.query;
@@ -221,7 +207,6 @@ const addContact = asyncHandler(async (req, res) => {
           const user = await User.find(keyword);
           console.log(user[0].userContacts);
           const contact = await user[0].userContacts.find((c) => c.recipients[0]===senderId && !c.isGroupChat );
-          // console.log(contact.contactName);
           res.send(contact.contactName);
       });
 
@@ -259,7 +244,6 @@ const addContact = asyncHandler(async (req, res) => {
           }
         })
         
-        // console.log(contact.recipients);
         const newMem = await User.findOne({username:recipient});
 
         newMem.userContacts.push({
