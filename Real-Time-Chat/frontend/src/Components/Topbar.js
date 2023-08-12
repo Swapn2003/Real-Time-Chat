@@ -5,7 +5,6 @@ const Topbar = (props) => {
   const handleOnClick = ()=>{
     if(props.myId!=null)
     props.setmyId("");
-    // console.log("logOut");
   }
   return (
     <div>
